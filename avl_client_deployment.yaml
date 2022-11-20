@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: avl-client
+  labels:
+    app: avl-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: avl-client
+  template:
+    metadata:
+      labels:
+        app: avl-client
+    spec:
+      containers:
+      - name: avl-client
+        image: ezmamig/avl_client:latest
+        ports:
+        - containerPort: 5000
