@@ -18,4 +18,4 @@ spec:
       - name: avl-backend
         image: ezmamig/avl_backend:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 5020

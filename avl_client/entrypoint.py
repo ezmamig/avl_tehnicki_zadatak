@@ -13,8 +13,8 @@ def hello():
 def hash():
 	if request.method == "POST":
 
-		client_url = 'http://avl-client-api:5000/hash'
-		backend_url = 'http://avl-backend-api:5000/'
+		client_url = 'http://avl-client-api:5010/hash'
+		backend_url = 'http://avl-backend-api:5020/'
 		try:
 		    response = requests.get(client_url).text
 		    print(response)

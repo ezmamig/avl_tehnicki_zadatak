@@ -7,7 +7,7 @@ services:
         context: .
         dockerfile: ./avl_backend/Dockerfile
     ports:
-      - 5020:5000
+      - 5020:5020
   avl_client:
     container_name: avl-client-api
     image: avl_client:latest
@@ -15,4 +15,4 @@ services:
         context: .
         dockerfile: ./avl_client/Dockerfile
     ports:
-      - 5010:5000
+      - 5010:5010

@@ -18,4 +18,4 @@ spec:
       - name: avl-client
         image: ezmamig/avl_client:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 5010

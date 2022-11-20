@@ -4,7 +4,7 @@ RUN pip install flask
 WORKDIR /app
 COPY ./avl_backend .
 
-EXPOSE 5000
+EXPOSE 5020
 ENV FLASK_APP=entrypoint.py
 
-CMD ["flask", "run", "-h", "0.0.0.0", "-p", "5000"]
+CMD ["flask", "run", "-h", "0.0.0.0", "-p", "5020"]
