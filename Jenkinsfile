@@ -32,8 +32,8 @@ pipeline {
         }
         stage ("Cleanup"){
             steps{
-                sh "docker rmi -f avl_backend:latest
-                sh "docker rmi -f avl_client:latest
+                sh "docker rmi -f avl_backend:latest"
+                sh "docker rmi -f avl_client:latest"
                 sh "docker rmi -f ezmamig/avl_backend:${DOCKER_TAG}"
                 sh "docker rmi -f ezmamig/avl_client:${DOCKER_TAG}"
             }
