@@ -2,7 +2,7 @@ version: "3.7"
 services:
   avl_backend:
     container_name: avl-backend-api
-    image: avl_backend
+    image: avl_backend:latest
     build:
         context: .
         dockerfile: ./avl_backend/Dockerfile
@@ -10,7 +10,7 @@ services:
       - 5020:5000
   avl_client:
     container_name: avl-client-api
-    image: avl_client
+    image: avl_client:latest
     build:
         context: .
         dockerfile: ./avl_client/Dockerfile
