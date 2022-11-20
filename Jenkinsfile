@@ -7,8 +7,8 @@ pipeline {
         stage ("Build stage"){
             steps{
                 sh "docker-compose build"
-        sh "docker tag avl_backend:latest ezmamig/avl_backend:${DOCKER_TAG}"
-        sh "docker tag avl_client:latest ezmamig/avl_client:${DOCKER_TAG}"
+                sh "docker tag avl_backend:latest ezmamig/avl_backend:${DOCKER_TAG}"
+                sh "docker tag avl_client:latest ezmamig/avl_client:${DOCKER_TAG}"
             }
         }
         stage ("Unit tests stage"){
