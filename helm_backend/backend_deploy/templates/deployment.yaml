@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: avl-backend
+  labels:
+    app: avl-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: avl-backend
+  template:
+    metadata:
+      labels:
+        app: avl-backend
+    spec:
+      containers:
+      - name: avl-backend
+        image: ezmamig/avl_backend:latest
+        ports:
+        - containerPort: 5020
