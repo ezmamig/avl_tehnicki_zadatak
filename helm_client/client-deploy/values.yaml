@@ -1,3 +1,0 @@
-deployment:
-  image: "ezmamig/avl_client"
-  tag: "latest"
