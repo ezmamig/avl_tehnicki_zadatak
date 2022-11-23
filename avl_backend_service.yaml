@@ -7,6 +7,5 @@ spec:
     app: avl-backend
   ports:
     - protocol: TCP
-      port: 5020
+      port: 80
       targetPort: 5000
-  type: LoadBalancer

@@ -5,6 +5,6 @@ metadata:
 data:
   config.json: |
     {
-    	"clientApi":"http://avl-client-service:5010/hash",
-    	"backendApi":"http://avl-backend-service:5020/"
+    	"clientApi":"http://avl-client-service/hash",
+    	"backendApi":"http://avl-backend-service/"
     }
