@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: client-service-config
+data:
+  config.json: |
+    {
+    	"clientApi":"http://avl-client-service:5010/hash",
+    	"backendApi":"http://avl-backend-service:5020/"
+    }

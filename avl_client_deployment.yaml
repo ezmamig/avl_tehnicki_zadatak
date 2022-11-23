@@ -18,4 +18,11 @@ spec:
       - name: avl-client
         image: ezmamig/avl_client:latest
         ports:
-        - containerPort: 5010
+        - containerPort: 5000
+        volumeMounts:
+        - name: config-volume
+          mountPath: /configs/
+      volumes:
+      - name: config-volume
+        configMap:
+          name: client-service-config

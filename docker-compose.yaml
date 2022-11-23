@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   avl_backend:
-    container_name: avl-backend-api
+    container_name: avl-backend
     image: avl_backend:latest
     build:
         context: .
@@ -9,7 +9,7 @@ services:
     ports:
       - 5020:5000
   avl_client:
-    container_name: avl-client-api
+    container_name: avl-client
     image: avl_client:latest
     build:
         context: .
