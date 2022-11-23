@@ -1,0 +1,4 @@
+{
+	"clientApi":"http://avl-client-api:5000/hash",
+	"backendApi":"http://avl-backend-api:5000/"
+}

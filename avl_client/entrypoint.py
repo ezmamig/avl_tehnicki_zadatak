@@ -13,8 +13,10 @@ def hello():
 def hash():
 	if request.method == "POST":
 
-		client_url = 'http://avl-client-api:5010/hash'
-		backend_url = 'http://avl-backend-api:5020/'
+		config = readConfig()
+
+		client_url = config["clientApi"]
+		backend_url = config["backendApi"]
 		try:
 		    response = requests.get(client_url).text
 		    print(response)
@@ -27,6 +29,11 @@ def hash():
 		return hash_output
 	else:
 		return render_template("request.html")
+
+def readConfig():
+	with open("configs/config.json", "r") as f:
+		file = json.load(f)
+		return file
 
 if __name__ == "__main__":
 	app.run(debug=True)
