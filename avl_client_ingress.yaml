@@ -1,0 +1,13 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: avl-ingress
+  namespace: avl-namespace
+spec:
+  rules:
+  - host: avl-tehnicki-zadatak.com
+    http:
+      paths:
+      - backend:
+          serviceName: avl-client-service
+          servicePort: 80
