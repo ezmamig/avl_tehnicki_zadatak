@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: client-service-config
+  namespace: avl-namespace
 data:
   config.json: |
     {
