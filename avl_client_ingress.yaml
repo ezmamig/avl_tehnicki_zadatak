@@ -8,6 +8,8 @@ spec:
   - host: avl-tehnicki-zadatak.com
     http:
       paths:
-      - backend:
-          serviceName: avl-client-service
-          servicePort: 80
+      - defaultBackend:
+          service:
+            name: avl-client-service
+          service:
+            port: 80
