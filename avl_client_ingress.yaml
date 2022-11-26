@@ -8,7 +8,7 @@ metadata:
   namespace: avl-namespace
 spec:
   rules:
-  - host: kubernetes.docker.internal
+  - host: avl.tehnici.zadatak
     http:
       paths:
       - path: /
