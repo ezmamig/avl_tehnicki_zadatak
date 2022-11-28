@@ -26,4 +26,4 @@ spec:
       volumes:
       - name: config-volume
         configMap:
-          name: client-service-config
+          name: client-api-config

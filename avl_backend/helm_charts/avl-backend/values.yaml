@@ -1,0 +1,10 @@
+name: "avl-backend"
+namespace: "avl-namespace"
+deployment:
+  image: "ezmamig/avl_backend"
+  tag: "latest"
+  containerPort: 5000
+  podReplicas: 1
+service:
+  name: "avl-backend-service"
+  port: 80

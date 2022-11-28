@@ -15,7 +15,7 @@ def hash():
 
 		config = readConfig()
 
-		client_url = config["clientApi"]
+		client_url = config["clientApi"] + "/hash"
 		backend_url = config["backendApi"]
 		try:
 		    response = requests.get(client_url).text

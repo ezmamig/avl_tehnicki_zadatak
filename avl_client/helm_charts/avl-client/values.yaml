@@ -1,0 +1,19 @@
+name: "avl-client"
+namespace: "avl-namespace"
+deployment:
+  image: "ezmamig/avl_client"
+  tag: "latest"
+  configVolumeLabel: "config-volume"
+  voulmePath: "/app/configs/"
+  configName: "client-api-config"
+  containerPort: 5000
+  podReplicas: 1
+service:
+  name: "avl-client-service"
+  port: 80
+configmap:
+  name: "client-api-config"
+ingress:
+  name: "avl-ingress"
+  host: "avl.tehnici.zadatak"
+  port: 80
