@@ -1,8 +1,0 @@
-deployment:
-  image: "ezmamig/avl_backend"
-  tag: "latest"
-name: "avl-backend"
-serviceName: "avl-backend-api"
-containerPort: 5020
-servicePort: 5020
-podReplicas: 1

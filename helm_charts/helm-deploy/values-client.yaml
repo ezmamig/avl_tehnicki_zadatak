@@ -1,8 +1,0 @@
-deployment:
-  image: "ezmamig/avl_client"
-  tag: "latest"
-name: "avl-client"
-serviceName: "avl-client-api"
-containerPort: 5010
-servicePort: 5010
-podReplicas: 1
