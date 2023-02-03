@@ -1,0 +1,19 @@
+name: 'TPT Home finder and runner'
+description: 'Find TPT home and run tpt.exe'
+inputs:
+  tptFileName:
+    description: 'tpt file name'
+    required: true
+  tptFilePath:
+    description: 'tpt file path'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install TestRunner and update config
+      run: |
+        echo 'Execute update_config.py'
+      shell: powershell
+      env:
+        tpt_file_path: ${{ inputs.tptFilePath }}\${{ inputs.tptFileName }}
