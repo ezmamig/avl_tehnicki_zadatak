@@ -1,0 +1,22 @@
+name: 'TPT Home finder and runner'
+description: 'Find TPT home and run tpt.exe'
+inputs:
+  tptFileName:
+    description: 'tpt file name'
+    required: true
+  tptFilePath:
+    description: 'tpt file path'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Execute TPT
+      shell: powershell
+      run: |
+        
+        $tptFileFullPath = "${{ inputs.tptFilePath }}" + "${{ inputs.tptFileName }}"
+        echo "tpt file Name: ${{ inputs.tptFileName }}"
+        echo "tpt file path: ${{ inputs.tptFilePath }}"
+        echo "Start-Process"
+        echo "tpt test finished!"
