@@ -7,6 +7,9 @@ inputs:
   tptFilePath:
     description: 'tpt file path'
     required: true
+  tptFileNoExtension:
+    description: 'tpt file extension'
+    required: true
 
 runs:
   using: "composite"
@@ -14,6 +17,7 @@ runs:
     - name: Install TestRunner and update config
       run: |
         echo 'Execute update_config.py'
+        echo ${{ env.tpt_file_path }}
       shell: powershell
       env:
-        tpt_file_path: ${{ inputs.tptFilePath }}\${{ inputs.tptFileName }}
+        tpt_file_path: ${{ inputs.tptFilePath }}\${{ inputs.tptFileNoExtension }}\${{ inputs.tptFileName }}
