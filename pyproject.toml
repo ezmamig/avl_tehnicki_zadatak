@@ -5,9 +5,6 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "recursiveProject"
 version = "1.0.0"
-dependencies = [
-    "pyProject@git+https://github.com/ezmamig/testni-repo.git#egg=pyProject"
-]
 
 [tool.setuptools]
 packages = ["recursiveProject"]
